@@ -15,7 +15,7 @@ module.exports = function(grunt){
                               }
                 },
 
-        cssmin: {
+        /*cssmin: {
                   options: {
                             shorthandCompacting: false,
                             roundingPrecision: -1
@@ -25,7 +25,7 @@ module.exports = function(grunt){
                                     'release/css/output.min.css': ['css/style.css']
                                   }
                           }
-                },
+                },*/
 
 
         htmlmin: {                                             // Task
@@ -59,5 +59,5 @@ module.exports = function(grunt){
               }
       });
 
-    grunt.registerTask('default',['uglify','cssmin','htmlmin','copy']);
+    grunt.registerTask('default',['uglify','htmlmin','copy']);
   }
