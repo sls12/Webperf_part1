@@ -1,3 +1,39 @@
+#Solution worked out for Website Performance Optimization Project
+
+## Part-1 : Optimize PageSpeed Insights score for index.html
+
+###Steps to run
+    - Unpack the zipped File
+    - Open Terminal (on Mac) and cd path to the unzipped folder
+    - type in "grunt" and enter
+    - In Terminal type "python -m SimpleHTTPServer 8000"
+    - Open new Terminal window and type in "./ngrok http 8000"
+    - Open "http://localhost:8000" in Chrome web browser to check the page.
+    - In Google PageSpeed Insights page , copy url from ngrok window and click analyze
+    - You should see the score.
+    "It is more than 90 for Desktop and mobile versions"
+
+### Changes Done
+    - Made Style.css inline
+    - Added media query in link print.css in the index.html
+    - Used async attributed in script tag linking to external files
+    - Minified the files - CSS, JavaScript and html files using Grunt
+
+## Part-2 : Optimize Frames per Second in pizza.html
+
+###Steps to run
+    - Open "/views/pizza.html" with Google Chrome
+    - Use Google Chrome DevTools to track frames per sec while scrolling
+    "Its consistently close to 60"
+
+### Changes Done
+    - DOM Element caching
+    - Adding variable declaration in the for loop initialization
+    - Accessing elements using classnames and ids
+    - Changed number of moving pizzas to 25
+    - Added "transform: translateZ(0); will-change :transform;" to the mover class element in style.css
+    - Though not in the scope of the specification, year changed from 2014 to 2016 in the footer note in pizzas.html, - Time to update...are you listening Udacity!!
+
 ## Website Performance Optimization portfolio project
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
@@ -32,7 +68,7 @@ Profile, optimize, measure... and then lather, rinse, and repeat. Good luck!
 
 ####Part 2: Optimize Frames per Second in pizza.html
 
-To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js. 
+To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js.
 
 You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
 

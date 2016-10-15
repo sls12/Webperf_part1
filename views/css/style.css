@@ -33,17 +33,21 @@ form {
   position: fixed;
   width: 256px;
   z-index: -1;
+  transform: translateZ(0); /* These 2 lines added to promote elements to their own composite layers */
+  will-change :transform;
 }
 
 .randomPizzaContainer {
   float: left;
   display: flex;
+
 }
 
 .randomPizzaContainer:after {
   content: "";
   display: table;
   clear:both;
+
 }
 
  .container {
