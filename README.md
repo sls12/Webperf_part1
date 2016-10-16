@@ -6,6 +6,7 @@
     - Unpack the zipped File
     - Open Terminal (on Mac) and cd path to the unzipped folder
     - type in "grunt" and enter
+    - cd "release"
     - In Terminal type "python -m SimpleHTTPServer 8000"
     - Open new Terminal window and type in "./ngrok http 8000"
     - Open "http://localhost:8000" in Chrome web browser to check the page.
